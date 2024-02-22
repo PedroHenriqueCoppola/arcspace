@@ -19,7 +19,8 @@
 
   --white: hsl(0, 0%, 100%);
   --text: hsl(0, 0%, 13%);
-  --app-bg: hsl(0, 0%, 90%);
+  --app-bg: hsl(0, 0%, 96%);
+  --button-bg: hsl(0, 0%, 12%);
   --gray-articles: hsl(0, 0%, 98%);
   --switch-light: hsl(20, 1%, 39%);
   --switch-dark: hsl(60, 1%, 21%);
@@ -116,4 +117,75 @@ body {
   color: var(--white);
   font-size: 2.4rem;
   line-height: 3rem;
+}
+
+.about {
+  background-color: var(--white);
+  margin-top: -.3rem;
+  padding: 6rem 5rem 7rem;
+}
+
+.about > h3 {
+  color: var(--text);
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.aboutText {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.aboutText > h2 {
+  color: var(--text);
+  font-size: 6rem;
+}
+
+.welcome {
+  max-width: 48rem;
+}
+
+.welcome > p {
+  color: var(--text);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.9rem;
+}
+
+.welcome > button {
+  margin-top: 2.5rem;
+  padding: .9rem 2.3rem 1.2rem;
+  border: none;
+  background-color: var(--button-bg);
+  color: var(--white);
+  border-radius: 30px;
+  font-size: 1.6rem;
+  display: flex;
+  text-align: center;
+  align-content: center;
+}
+
+.totals {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8rem;
+}
+
+.totals > article {
+  background-color: var(--app-bg);
+
+  max-width: 38rem;
+  padding: 2rem 2.8rem 2.4rem 2.2rem;
+  border-radius: 1rem;
+}
+
+.totals > article > h2 {
+  font-size: 4.8rem;
+  letter-spacing: .2rem;
+}
+
+.totals > article > p {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
 }
