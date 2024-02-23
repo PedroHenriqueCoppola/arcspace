@@ -19,8 +19,9 @@
 
   --white: hsl(0, 0%, 100%);
   --text: hsl(0, 0%, 13%);
-  --app-bg: hsl(0, 0%, 96%);
+  --app-bg: hsl(0, 0%, 90%);
   --button-bg: hsl(0, 0%, 12%);
+  --article-button: hsla(0, 0%, 15%, 0.521);
   --gray-articles: hsl(0, 0%, 98%);
   --switch-light: hsl(20, 1%, 39%);
   --switch-dark: hsl(60, 1%, 21%);
@@ -164,6 +165,13 @@ body {
   display: flex;
   text-align: center;
   align-content: center;
+  
+  transition-property: transform;
+  transition-duration: 0.4s;
+}
+
+.welcome > button:hover {
+  transform: scale(1.1);
 }
 
 .totals {
@@ -173,7 +181,7 @@ body {
 }
 
 .totals > article {
-  background-color: var(--app-bg);
+  background-color: var(--gray-articles);
 
   max-width: 38rem;
   padding: 2rem 2.8rem 2.4rem 2.2rem;
@@ -186,6 +194,102 @@ body {
 }
 
 .totals > article > p {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   font-size: 1.6rem;
+}
+
+.services {
+  background-color: var(--gray-articles);
+  padding: 6rem 5rem 8rem;
+}
+
+.services > h3 {
+  color: var(--text);
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.services > h2 {
+  color: var(--text);
+  font-size: 6rem;
+  max-width: 100rem;
+  line-height: 7.5rem;
+  margin-bottom: 5rem;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.articles > article {
+  position: relative;
+  overflow: hidden;
+  max-height: 50rem;
+  transition-property: transform;
+  transition-duration: 0.4s;
+}
+
+.articles > article:hover {
+  transform: scale(1.05);
+}
+
+.articles > article > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  border-radius: 20px;
+}
+
+.detail {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+}
+
+.detail > h4 {
+  font-size: 4.3rem;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.detail > button {
+  padding: .8rem 2.3rem .8rem 1.5rem;
+  border: var(--white) 1px solid;
+  background-color: var(--article-button);
+  border-radius: 30px;
+
+  color: var(--white);
+  font-size: 1.5rem;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  transition-property: transform;
+  transition-duration: 0.4s;
+}
+
+.detail > button:hover {
+  transform: scale(1.1);
+}
+
+.detail > button > img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: .5rem;
+}
+
+.articles > article > h4 {
+  position: absolute;
+  bottom: 4rem;
+  left: 4rem;
+
+  color: var(--white);
+  font-size: 2.4rem;
+  line-height: 3rem;
 }
