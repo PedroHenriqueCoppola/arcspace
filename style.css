@@ -24,6 +24,7 @@
   --button-bg: hsl(0, 0%, 12%);
   --article-button: hsla(0, 0%, 15%, 0.521);
   --gray-articles: hsl(0, 0%, 98%);
+  --span-text: hsl(0, 0%, 65%);
   --switch-light: hsl(20, 1%, 39%);
   --switch-dark: hsl(60, 1%, 21%);
 }
@@ -398,4 +399,129 @@ ion-icon {
 
 .seeAll:hover {
   transform: scale(1.05);
+}
+
+.popular {
+  display: flex;
+  background-color: var(--gray-articles);
+  padding: 6rem 7rem 8rem;
+  gap: 6rem;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.images > .tableOne {
+  grid-column: span 2;
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.tableTwo, .tableThree {
+  object-fit: cover;
+  border-radius: 15px;
+  width: 21rem;
+  height: 14rem;
+}
+
+.content > h3 {
+  color: var(--text);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.content > h2 {
+  color: var(--text);
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+.content > .value {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+
+  color: var(--text);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.content > .value > span {
+  color: var(--span-text);
+  font-weight: 400;
+  font-size: 2rem;
+  text-decoration: line-through;
+}
+
+.content > h4 {
+  color: var(--text);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.content > .description {
+  color: var(--black);
+  font-size: 1.8rem;
+  margin-top: 1.2rem;
+  max-width: 50rem;
+  font-weight: 400;
+}
+
+.content > h5 {
+  color: var(--text);
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-top: 2rem;
+}
+
+.colors {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.colorOne {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #1FA1EA;
+}
+
+.colorTwo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #3990C2;
+}
+
+.colorThree {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #457896;
+}
+
+.content > button {
+  border: none;
+  color: var(--white);
+  background-color: var(--black);
+  border-radius: 30px;
+  font-size: 1.8rem;
+  padding: .9rem 1.7rem;
+  margin-top: 2.8rem;
+  cursor: pointer;
+
+  transition-property: transform;
+  transition-duration: 0.4s;
+}
+
+.content > button:hover {
+  transform: scale(1.1);
 }
