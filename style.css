@@ -38,6 +38,7 @@ body {
   margin: 0 auto;
 }
 
+/* HEADER SECTION */
 .container {
   position: relative;
 }
@@ -122,6 +123,7 @@ body {
   line-height: 3rem;
 }
 
+/* ABOUT SECTION */
 .about {
   background-color: var(--white);
   margin-top: -.3rem;
@@ -201,6 +203,7 @@ body {
   font-size: 1.6rem;
 }
 
+/* SERVICES SECTION */
 .services {
   background-color: var(--gray-articles);
   padding: 6rem 5rem 8rem;
@@ -298,6 +301,7 @@ ion-icon {
   line-height: 3rem;
 }
 
+/* PROJECTS SECTION */
 .projects {
   display: grid;
   background-color: var(--white);
@@ -401,6 +405,7 @@ ion-icon {
   transform: scale(1.05);
 }
 
+/* POPULAR SECTION*/
 .popular {
   display: flex;
   background-color: var(--gray-articles);
@@ -524,4 +529,31 @@ ion-icon {
 
 .content > button:hover {
   transform: scale(1.1);
+}
+
+/*FOOTER SECTION */
+footer {
+  position: relative;
+  height: 90rem;
+}
+
+.fImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+footer > h1 {
+  position: absolute;
+  top: 7%;
+  color: var(--white);
+  font-size: 10rem;
+  text-align: center;
+}
+
+footer > .fButtons > button {
+  position: absolute;
+  top: 15%;
+  right: 50%;
 }
