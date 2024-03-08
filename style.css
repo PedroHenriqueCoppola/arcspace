@@ -24,13 +24,19 @@
   --button-bg: hsl(0, 0%, 12%);
   --article-button: hsla(0, 0%, 15%, 0.521);
   --gray-articles: hsl(0, 0%, 98%);
-  --span-text: hsl(0, 0%, 65%);
+  --span-text: hsl(0, 0%, 64%);
+  --line: hsl(0, 0%, 97%);
   --switch-light: hsl(20, 1%, 39%);
   --switch-dark: hsl(60, 1%, 21%);
 }
 
 body {
   background-color: var(--app-bg);
+
+  -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
 }
 
 .app {
@@ -534,7 +540,7 @@ ion-icon {
 /*FOOTER SECTION */
 footer {
   position: relative;
-  height: 90rem;
+  height: 82rem;
 }
 
 .fImage {
@@ -552,8 +558,114 @@ footer > h1 {
   text-align: center;
 }
 
-footer > .fButtons > button {
+footer > button {
+  display: flex;
   position: absolute;
-  top: 15%;
-  right: 50%;
+  top: 40%;
+  right: 45%;
+
+  border: 1px solid var(--white);
+  background-color: var(--white);
+  color: var(--black);
+
+  font-size: 2rem;
+  font-weight: 900;
+  padding: 1rem 3.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+
+  transition-duration: 0.4s;
+}
+
+footer > button:hover{
+  background-color: #ffffffe1;
+  transform: scale(1.1);
+}
+
+.final {
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  left: 3%;
+
+  background-color: var(--white);
+  border-radius: 10px;
+
+  padding: 3rem 3.5rem;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+.column1 > .title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  color: var(--text);
+  font-size: 2.2rem;
+}
+
+.column1 > .title > img {
+  height: 3rem;
+  width: 3rem;
+
+  filter: invert(100%);
+}
+
+.column1 > p {
+  color: var(--span-text);
+  font-size: 1.2rem;
+
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.column2 > strong,
+.column3 > strong,
+.column4 > strong,
+.column5 > strong {
+  font-size: 2rem;
+  display: flex;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.column2 > p,
+.column3 > p,
+.column4 > p,
+.column5 > p {
+  font-size: 1.5rem;
+  color: var(--span-text);
+  
+  display: flex;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+}
+
+.line {
+  border: 1px solid var(--line);
+
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.rights {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--span-text);
 }
