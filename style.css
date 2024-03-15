@@ -562,7 +562,8 @@ footer > button {
   display: flex;
   position: absolute;
   top: 40%;
-  right: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   border: 1px solid var(--white);
   background-color: var(--white);
@@ -578,8 +579,7 @@ footer > button {
 }
 
 footer > button:hover{
-  background-color: #ffffffe1;
-  transform: scale(1.1);
+  background-color: #dbdbdb;
 }
 
 .final {
